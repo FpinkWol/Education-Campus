@@ -35,40 +35,70 @@ class DetailStudentProfileView(generics.RetrieveUpdateDestroyAPIView):
 
 
 
-class CourseView(generics.ListAPIView,
-                 generics.RetrieveUpdateDestroyAPIView): 
+class CourseView(generics.ListCreateAPIView):
     
     queryset = Course.objects.all()
     serializer_class = CourseSerializer
 
 
 
-class ArticleView(generics.ListAPIView,
-                  generics.RetrieveUpdateDestroyAPIView):
+class DetailCourseView(generics.RetrieveUpdateDestroyAPIView):
+    
+    queryset = Course.objects.all()
+    serializer_class = CourseSerializer
+
+
+
+class ArticleView(generics.ListCreateAPIView):
 
     queryset = Article.objects.all()
     serializer_class = ArticleSerializer
 
 
 
-class VideoView(generics.ListAPIView,
-                generics.RetrieveUpdateDestroyAPIView): 
+class DetailArticleView(generics.RetrieveUpdateDestroyAPIView):
+
+    queryset = Article.objects.all()
+    serializer_class = ArticleSerializer
+
+
+
+class VideoView(generics.ListCreateAPIView):
     
     queryset = Video.objects.all()
     serializer_class = VideoSerializer
 
 
 
-class CommentView(generics.ListAPIView,
-                  generics.RetrieveUpdateDestroyAPIView):
+class DetailVideoView(generics.RetrieveUpdateDestroyAPIView):
+    
+    queryset = Video.objects.all()
+    serializer_class = VideoSerializer
+
+
+
+class CommentView(generics.ListCreateAPIView):
 
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
 
 
 
-class ReplyView(generics.ListAPIView,
-                generics.RetrieveUpdateDestroyAPIView): 
+class DetailCommentView(generics.RetrieveUpdateDestroyAPIView):
+
+    queryset = Comment.objects.all()
+    serializer_class = CommentSerializer
+
+
+
+class ReplyView(generics.ListCreateAPIView):
+    
+    queryset = Reply.objects.all()
+    serializer_class = ReplySerializer
+
+
+
+class DetailReplyView(generics.RetrieveUpdateDestroyAPIView):
     
     queryset = Reply.objects.all()
     serializer_class = ReplySerializer
