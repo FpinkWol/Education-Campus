@@ -1,17 +1,16 @@
 '''
-    Models:
-        1.  Teacher
-        2.  Student
-        3.  AbstractProfile
-        4.  Course
-        5.  Article
-        6.  Video
-        7.  Comment
-        8. Reply
-        9. VideoView
-        1. VideoLike
-        13. ArticleView
-        14. ArticleLike
+Models:
+    Teacher
+    Student
+    Course
+    Article
+    Video
+    Comment
+    Reply
+    VideoView
+    VideoLike
+    ArticleView
+    ArticleLike
 '''
 from datetime import datetime
 from django.contrib.auth import get_user_model
