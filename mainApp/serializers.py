@@ -6,7 +6,7 @@ class TeacherProfileSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Teacher
-        fields = ('avatar', 'bio', 'date_created') 
+        fields = ('id', 'username', 'avatar', 'bio', 'date_created') 
 
 
 
@@ -14,7 +14,7 @@ class StudentProfileSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Student
-        fields = ('avatar', 'bio', 'date_created') 
+        fields = ('id', 'username', 'avatar', 'bio', 'date_created') 
 
 
 

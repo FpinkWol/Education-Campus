@@ -1,4 +1,10 @@
+from django.http import HttpResponse, JsonResponse
+
+from rest_framework.parsers import JSONParser
+from rest_framework import status
 from rest_framework import generics
+from rest_framework.views import APIView
+
 from .serializers import *
 from .models import Teacher, Video
 
@@ -67,6 +73,19 @@ class VideoView(generics.ListCreateAPIView):
     
     queryset = Video.objects.all()
     serializer_class = VideoSerializer
+
+
+
+class CourseVideo(generics.ListAPIView):
+
+    serializer_class = VideoSerializer
+
+    def get_queryset(self):
+        queryset = Video.objects.all()
+        course_id = self.kwargs.get('pk')
+        if course_id is not None:
+            return queryset.filter(course=course_id)
+        return None
 
 
 

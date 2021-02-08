@@ -10,6 +10,7 @@ urlpatterns = [
     path('student/<int:pk>/', DetailStudentProfileView.as_view()),
     path('course/',           CourseView.as_view()),
     path('course/<int:pk>/',  DetailCourseView.as_view()),
+    path('course/<int:pk>/video/',     CourseVideo.as_view()),
     path('article/',          ArticleView.as_view()),
     path('article/<int:pk>/', DetailArticleView.as_view()),
     path('video/',            VideoView.as_view()),
