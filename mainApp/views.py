@@ -76,7 +76,7 @@ class VideoView(generics.ListCreateAPIView):
 
 
 
-class CourseVideo(generics.ListAPIView):
+class CourseVideoView(generics.ListAPIView):
 
     serializer_class = VideoSerializer
 
